@@ -1467,9 +1467,9 @@ def matchreportsfile(request):
     import boto3
 
     #NOTE - in production this will be in config in settings
-    AWS_ACCESS_KEY_ID = 'AKIA5INQPWNFXLI5LFPM'
-    AWS_SECRET_ACCESS_KEY = '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'
-    AWS_STORAGE_BUCKET_NAME = 'db-polly-test' #'jerseyjaunt-production'
+    AWS_ACCESS_KEY_ID = CONFIG['AWS_ACCESS_KEY_ID']
+    AWS_SECRET_ACCESS_KEY = CONFIG['AWS_SECRET_ACCESS_KEY']
+    AWS_STORAGE_BUCKET_NAME = CONFIG['AWS_STORAGE_BUCKET_NAME'] #'db-polly-test' #'jerseyjaunt-production'
 
     region = 'us-east-1'
 
