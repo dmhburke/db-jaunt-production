@@ -1,0 +1,102 @@
+{% extends "_baseGolfApp.html" %}
+
+{% block content %}
+
+{% load static %}
+
+<div id=matchReportScrollContainer>
+<!-- {{test_text | linebreaksbr}} -->
+
+<div id=matchReportTitle>Welcome to match reports</div>
+<div id=matchReportInstructions>These twelve inputs help feed the match report creation engine, so feel free to be creative!</div>
+
+<div id=matchReportFormContainer>
+<form method="post">
+  {% csrf_token %}
+
+  {{form.report_name}}
+
+  <div id=matchReportInputBuffer></div>
+
+  <!-- Adjective pre-covid -->
+  <div id=matchReportQuestionContainer>
+    <div id=matchReportQuestionText>1. An <span id=matchReportEmphasis>adjective</span> that describes your last big night out</div>
+    <div id=matchReportQuestionTextHelp>Adjectives describe things/events e.g. debaucherous</div>
+    <div id=matchReportInputContainer>{{form.adjective1}}</div>
+  </div>
+  <!-- Adjective TBD -->
+  <div id=matchReportQuestionContainer>
+    <div id=matchReportQuestionText>2. An <span id=matchReportEmphasis>adjective</span> that describes a thing of beauty</div>
+    <div id=matchReportQuestionTextHelp>Adjectives describe things/events e.g. spectacular</div>
+    <div id=matchReportInputContainer>{{form.adjective2}}</div>
+  </div>
+  <!-- Regional saying -->
+  <div id=matchReportQuestionContainer>
+    <div id=matchReportQuestionText>3. An <span id=matchReportEmphasis>exclamation</span> popular in the country or region you come from</div>
+    <div id=matchReportQuestionTextHelp>A regional exclamation e.g. Cor Blimey</div>
+    <div id=matchReportInputContainer>{{form.old_saying}}</div>
+  </div>
+  <!-- Animals plural -->
+  <div id=matchReportQuestionContainer>
+    <div id=matchReportQuestionText>4. A type of <span id=matchReportEmphasis>wild animals</span> (plural)</div>
+    <div id=matchReportQuestionTextHelp>Enter the animal's name in plural e.g. Iguanas</div>
+    <div id=matchReportInputContainer>{{form.animals}}</div>
+  </div>
+
+  <!-- fave drinks plural -->
+  <div id=matchReportQuestionContainer>
+    <div id=matchReportQuestionText>5. Your <span id=matchReportEmphasis>favorite drinks</span> (plural)</div>
+    <div id=matchReportQuestionTextHelp>Enter the drink's name in plural e.g. Tequilas</div>
+    <div id=matchReportInputContainer>{{form.fav_drink}}</div>
+  </div>
+  <!-- sports cliche -->
+  <div id=matchReportQuestionContainer>
+    <div id=matchReportQuestionText>6. A cliched <span id=matchReportEmphasis>sports expression</span></div>
+    <div id=matchReportQuestionTextHelp>A cliche you hear in sports e.g. Full credit to the boys</div>
+    <div id=matchReportInputContainer>{{form.sports_expression}}</div>
+  </div>
+  <!-- golf expression -->
+  <div id=matchReportQuestionContainer>
+    <div id=matchReportQuestionText>7. A <span id=matchReportEmphasis>golf expression</span></div>
+    <div id=matchReportQuestionTextHelp>A saying that you commonly hear on the golf course e.g. Be the club</div>
+    <div id=matchReportInputContainer>{{form.golf_saying}}</div>
+  </div>
+  <!-- famous pop lyric -->
+  <div id=matchReportQuestionContainer>
+    <div id=matchReportQuestionText>8. A famous <span id=matchReportEmphasis>teen pop lyric</span></div>
+    <div id=matchReportQuestionTextHelp>A lyric that's widely recognized e.g. I feel stupid, and contagious</div>
+    <div id=matchReportInputContainer>{{form.lyric}}</div>
+  </div>
+  <!-- Group no-one likes -->
+  <div id=matchReportQuestionContainer>
+    <div id=matchReportQuestionText>9. A <span id=matchReportEmphasis>societal group</span> that no-one likes</div>
+    <div id=matchReportQuestionTextHelp>A group or type of people (plural) commonly mocked e.g. Frat bros</div>
+    <div id=matchReportInputContainer>{{form.group_noone_likes}}</div>
+  </div>
+  <!-- Recent news event -->
+  <div id=matchReportQuestionContainer>
+    <div id=matchReportQuestionText>10. A <span id=matchReportEmphasis>news event</span> that's made headlines recently</div>
+    <div id=matchReportQuestionTextHelp>A story that's been in the news, expressed as "the X" e.g. the Presidential election</div>
+    <div id=matchReportInputContainer>{{form.recent_news}}</div>
+  </div>
+  <!-- profession plural -->
+  <div id=matchReportQuestionContainer>
+    <div id=matchReportQuestionText>11. A <span id=matchReportEmphasis>profession</span> (plural)</div>
+    <div id=matchReportQuestionTextHelp>The name of a profession or job, in plural e.g. accountants </div>
+    <div id=matchReportInputContainer>{{form.jobs}}</div>
+  </div>
+  <!-- office perk -->
+  <div id=matchReportQuestionContainer>
+    <div id=matchReportQuestionText>12. An <span id=matchReportEmphasis>office perk</span> that you miss during work from home</div>
+    <div id=matchReportQuestionTextHelp>Describe something you miss from the office e.g. comfy chairs</div>
+    <div id=matchReportInputContainer>{{form.office_perk}}</div>
+  </div>
+
+  <button id=matchReportButton type=submit>Submit inputs</button>
+
+</form>
+</div>
+
+</div>
+
+{% endblock %}

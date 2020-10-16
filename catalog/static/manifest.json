@@ -1,0 +1,17 @@
+{
+    "name": "The Jersey Jaunt",
+    "short_name": "Jersey Jaunt",
+    "start_url": "https://jaunt.par6golf.com",
+    "scope": "https://jaunt.par6golf.com/",
+    "display": "standalone",
+    "background_color": "#FFF",
+    "theme_color": "#3cc194",
+    "description": "Jersey Jaunt",
+    "dir": "ltr",
+    "lang": "en-US",
+    "icons":[{
+        "src": "https://jerseyjaunt-production.s3.us-east-2.amazonaws.com/pwa-assets/logo-ship-512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }]
+}

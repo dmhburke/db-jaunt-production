@@ -1,0 +1,65 @@
+{% extends "_baseGolfApp.html" %}
+
+{% block content %}
+{% load static %}
+
+<div id="teamsRoundHeader">
+  <div id=teamsRoundHeaderText>Saturday Teams Round</div>
+   <div id=teamsRoundSubHead>Enter scores</div></div>
+
+<div id="teamsRoundContainer">
+  <form method = "POST">
+      {% csrf_token %}
+
+<!-- Group 1 -->
+<div id="teamsRoundRowHead">
+<div id="teamsRoundRowHeadGroup">Group 1 - 4th & 5th</div>
+<div id="teamsRoundRowHeadThru">Thru</div>
+<div id="teamsRoundRowHeadScore">Score</div></div>
+
+<div id="teamsRoundRowContent">
+<div id="teamsRoundRowContentGroup">{{form.team_name1}}</div>
+<div id="teamsRoundRowContentThru">{{form.holes1}}</div>
+<div id="teamsRoundRowContentScore">{{form.score1}}</div></div>
+
+<!-- Group 2 -->
+<div id="teamsRoundRowHead">
+<div id="teamsRoundRowHeadGroup">Group 2 - 3th & 6th</div>
+<div id="teamsRoundRowHeadThru">Thru</div>
+<div id="teamsRoundRowHeadScore">Score</div></div>
+
+<div id="teamsRoundRowContent">
+<div id="teamsRoundRowContentGroup">{{form.team_name2}}</div>
+<div id="teamsRoundRowContentThru">{{form.holes2}}</div>
+<div id="teamsRoundRowContentScore">{{form.score2}}</div></div>
+
+<!-- Group 3 -->
+<div id="teamsRoundRowHead">
+<div id="teamsRoundRowHeadGroup">Group 3 - 2nd & 7th</div>
+<div id="teamsRoundRowHeadThru">Thru</div>
+<div id="teamsRoundRowHeadScore">Score</div></div>
+
+<div id="teamsRoundRowContent">
+<div id="teamsRoundRowContentGroup">{{form.team_name3}}</div>
+<div id="teamsRoundRowContentThru">{{form.holes3}}</div>
+<div id="teamsRoundRowContentScore">{{form.score3}}</div></div>
+
+<!-- Group 4 -->
+<div id="teamsRoundRowHead">
+<div id="teamsRoundRowHeadGroup">Group 4 - 1st & 8th</div>
+<div id="teamsRoundRowHeadThru">Thru</div>
+<div id="teamsRoundRowHeadScore">Score</div></div>
+
+<div id="teamsRoundRowContent">
+<div id="teamsRoundRowContentGroup">{{form.team_name4}}</div>
+<div id="teamsRoundRowContentThru">{{form.holes4}}</div>
+<div id="teamsRoundRowContentScore">{{form.score4}}</div></div>
+
+<button id="teamsRoundScoreSubmitButton" type="submit">
+    <img style="width: 50%" src="{% static 'icons/scoreSubmitWhite.svg' %}">
+  </button>
+
+</form>
+
+</div>
+{% endblock %}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- ADD BROWSER TAB NAME -->
+<title>
+Jersey Jaunt |
+{% block browsertitle %}
+
+{% endblock %}
+</title>
+
+<!-- CORE DETAILS FOR TEXT AND DYNAMIC RESIZING -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- LINK TO CSS -->
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+<!-- ADD HOMESCREEN ICON -->
+<link rel="apple-touch-icon"
+  sizes="192x192"
+  href="{% static 'icons/_faviconShipwreckCircle512.png'%}">
+
+<!-- ADD BROWSER ICON TO PAGE -->
+<link rel="icon" type="image/png"href="{% static 'icons/_faviconShipwreckCircle512.png'%}">
+
+<!-- ADD JQUERY -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
+
+<!--  PWA SETTINGS -->
+<!-- Set homescreen app -->
+<link rel="apple-touch-icon"
+    href="https://jerseyjaunt-production.s3.us-east-2.amazonaws.com/pwa-assets/logo-ship-512.png"/> <!--Best practice to save the icon (in png format) to an S3 bucket and point to that-->
+<!-- PWA iOS enable standalone -->
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<!-- Manifest file -->
+<link rel="manifest" href="{% static 'manifest.json' %}"/>
+<meta name="theme-color" content="#3cc194"/>
+<!-- PWA iOS enable status bar override -->
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<!-- iOS splashscreen (not working)-->
+<link
+    rel="apple-touch-startup-image"
+    media="screen and (device-width: 375px) and (device-height: 812px) and (orientation: portrait)"
+    href="https://jerseyjaunt-production.s3.us-east-2.amazonaws.com/pwa-assets/logo-ship-512.png"/>
+
+</head>
+
+<body>
+  <div id="overallContainer">
+  <div id="header">
+    <div class="mobileContainer" id="headerContentContainer">
+
+        <a href="{% url 'landingpage'%}"><div class="navIconContainer"><img class="navIconImage" src="{% static 'icons/landingPage.svg' %}"></div></a>
+        <a href="{% url 'fullleaderboard'%}"><div class="navIconContainer"><img class="navIconImage" id="leaderboardIcon" src="{% static 'icons/fullLeaderboard.svg' %}"></div></a>
+        <a href="{% url 'scoringpage'%}"><div class="navIconContainer"><img class="navIconImage" id="scoreIcon" src="{% static 'icons/enterScores.svg' %}"></div></a>
+        <a href="{% url 'tourdetails'%}"><div class="navIconContainer"><img class="navIconImage" src="{% static 'icons/tourDetails.svg' %}"></div></a>
+        <a href="{% url 'login'%}"><div class="navIconContainer"><img class="navIconImage" style="height: 90%; margin-top: 3px;" src="{% static 'icons/jauntLogoWhite.svg' %}"></div></a>
+
+    </div></div>
+
+
+  <div class="mobileContainer" id="bodyContentContainer">
+{% block content %}
+
+{% endblock %}
+
+    </div>
+  </div>
+    </body>
+    </html>

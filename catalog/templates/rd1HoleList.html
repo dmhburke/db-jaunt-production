@@ -1,0 +1,37 @@
+{% extends "_baseGolfApp.html" %}
+
+{% block content %}
+{% load static %}
+<a href="{% url 'rd1leaderboard' %}">
+<div class="bigShadow" id="checkRoundLeaderboard">
+  <span id=leaderboardHighlightText>Rd 1</span> leaderboard
+</div></a>
+
+<div class="bigShadow" id="rd1HoleList">
+
+  {% if rd1holemodel_list %}
+  {% for hole in rd1holemodel_list %}
+
+  <a href="{{ hole.get_absolute_url }}">
+    {% if hole.tussle == 'YES' %}
+    <div class="holeEntryTussle" id="holeEntryButtonCTP">
+    {% else %}
+    <div class="bold" id="holeEntryButtonCTP">
+    {% endif %}
+      <div id="holeEntryButtonCTPText">{{ hole.number }}</div>
+    {% if hole.CTP > 0 %}
+      <img id="holeEntryButtonCTPIcon" style="height: 21px;" src=" {% static 'icons/ctpPurple.svg'%}">
+    {% elif hole.LD > 0 %}
+      <img id="holeEntryButtonCTPIcon" style="height: 20px;" src=" {% static 'icons/ldPurple.svg'%}">
+    {% endif %}
+    </div></a>
+    {% endfor %}
+    {% else %}
+    {% endif %}
+
+    <a href="{{scorecard_link}}" target="_blank">
+    <div class="ScorecardLink" id="rd1ScorecardLink">Course scorecard</div></a>
+
+
+    </div>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "_baseGolfApp.html" %}
+
+{% block content %}
+{% load static %}
+
+{% if team_name1 == "" %}
+No scores entered yet
+{% else %}
+{% for name, progress_score, holes, score in full_group_sorted %}
+
+<br>{{name}} {{holes}} {{score}}
+
+{% endfor %}
+{% endif %}
+<br><br>
+<a href='{% url "teamsround" %}'>enter scores</a>
+
+{% endblock %}

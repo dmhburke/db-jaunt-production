@@ -1,0 +1,133 @@
+{% extends "_baseGolfApp.html" %}
+
+{% block content %}
+
+{% load static %}
+
+<div id=matchReportScrollContainer>
+<!-- {{test_text | linebreaksbr}} -->
+
+<div id=matchReportTitle>Welcome to match reports</div>
+
+<!-- FORM CONTAINER -->
+<form method="post">
+  {% csrf_token %}
+
+  <!-- Select Voice -> {{form.polly_name}} -->
+
+<div id=matchReportFormContainer>
+  <div id=matchReportFormText>Select a round</div>
+  <div id=matchReportFormInput>{{roundForm.report_round}}</div>
+</div>
+<div id=matchReportFormContainer>
+  <div id=matchReportFormText>Select an author</div>
+  <div id=matchReportFormInput>{{roundForm.player_input}}</div>
+</div>
+<button id=matchReportButton name=round type=submit>Generate report</button>
+
+</form>
+
+{% if round_details == None %}
+
+
+{% else %}
+
+<!-- RESULTS SECTION -->
+<div class=matchReportSection id=showResults>Results</div>
+<div class="matchReportCollapse" id=resultsCollapse>
+<div class=matchReportContent>
+<!-- Leaderboard -->
+  <div id=matchReportLeaderboard>Leaderboard</div>
+  <div id=matchReportLeaderboardHeaderRow>
+    <div id=matchReportLeaderboardHeaderPlayer>Player name</div><div id=matchReportLeaderboardHeaderScores>Stbl</div><div id=matchReportLeaderboardHeaderScores>Stroke</div>
+    </div>
+  <!-- Loop player details -->
+  {% for player in round_details %}
+  <div class=matchReportPlayerRow>
+      <div id=matchReportLeaderboardPlayer>{{forloop.counter}}. {{player.player_name.name}}</div><div id=matchReportLeaderboardScores>{{player.player_stbl}}</div><div id=matchReportLeaderboardScores>{{player.player_score}}</div>
+  </div>
+  {% endfor %}
+  <!-- End player loop -->
+
+<!-- CTP/LD -->
+<div id=matchReportLeaderboard>CTP/LD</div>
+  <!-- CTP -->
+<div id=matchReportLeaderboardHeaderRow>
+  <div id=matchReportLeaderboardHeaderPlayer>Closest to pin</div></div>
+    <!-- Loop CTP/LD details -->
+    {% for hole, name in zipped_ctp %}
+  <div class=matchReportPlayerRow>
+    <div id=matchReportLeaderboardPlayer>{{name}}</div><div id=matchReportLeaderboardCTPLD>Hole {{hole}}</div>
+  </div>
+  {% endfor %}
+    <!-- End CTP/LD loop -->
+  <!-- LD -->
+<div id=matchReportLeaderboardHeaderRow>
+  <div id=matchReportLeaderboardHeaderPlayer>Longest drive</div></div>
+    <!-- Loop CTP/LD details -->
+    {% for hole, name in zipped_ld %}
+  <div class=matchReportPlayerRow>
+    <div id=matchReportLeaderboardPlayer>{{name}}</div><div id=matchReportLeaderboardCTPLD>Hole {{hole}}</div>
+  </div>
+  {% endfor %}
+    <!-- End CTP/LD loop -->
+
+<!-- Tussle -->
+<div id=matchReportLeaderboard>Snakepit Challenge</div>
+<div id=matchReportLeaderboardHeaderRow>
+  <div id=matchReportLeaderboardHeaderPlayer>Player name</div><div id=matchReportLeaderboardHeaderScores></div><div id=matchReportLeaderboardHeaderScores>Stbl</div>
+  </div>
+  <!-- Loop player details -->
+  {% for tussle in tussle_top3 %}
+  <div class=matchReportPlayerRow>
+      <div id=matchReportLeaderboardPlayer>{{forloop.counter}}. {{tussle.player_name.name}}</div><div id=matchReportLeaderboardScores></div><div id=matchReportLeaderboardScores>{{tussle.tussle_score}}</div>
+  </div>
+  {% endfor %}
+  <!-- End player loop -->
+
+</div>
+</div>
+
+<!-- REPORT SECTION -->
+<div class=matchReportSection id=showReport>Report</div>
+<div class=matchReportCollapse id=reportCollapse>
+<div class=matchReportContent id=reportText>
+  {{report_text | linebreaksbr}}
+<div style="color: lightgrey; padding-top: 5px; text-align: right"> Approx length = {{report_chars}} mins</div>
+</div>
+</div>
+
+
+
+<!-- NEWSCAST SECTION -->
+<div class=matchReportSection id=showNewscast>Newscast</div>
+<div class=matchReportCollapse id=newscastCollapse>
+<div class=matchReportContent>
+  <!-- FORM CONTAINER -->
+  <form method="post">
+    {% csrf_token %}
+
+    <!-- Select Voice -> {{form.polly_name}} -->
+
+  <div id=matchReportFormContainer>
+    <div id=matchReportFormText>Select a voice</div>
+    <div id=matchReportFormInput>{{pollyForm.polly_name}}</div>
+  </div>
+  <div id=matchReportFormContainer>
+    <div id=matchReportFormText>Enter admin code</div>
+    <div id=matchReportFormInput>{{pollyForm.polly_code}}</div>
+  </div>
+
+  <button id=matchReportButton name=polly type=submit>Create audio</button>
+
+  </form>
+
+</div>
+</div>
+
+{% endif %}
+<a href="{% url 'matchreportsinput' %}">
+<div id=matchReportInputLink>Want to add author details? <span id=matchReportInputLinkHighlight>Click here</span></div></a>
+</div>
+
+{% endblock %}

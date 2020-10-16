@@ -1,0 +1,26 @@
+{% extends "_baseGolfApp.html" %}
+
+{% block content %}
+
+{% load static %}
+
+<!-- WAITING BLOCK -->
+  <div id=matchReportWaitButton>Please wait. Report being created...</div>
+
+<!-- FILE LINK BLOCK -->
+<a href="{{file_location}}" target="_blank">
+<div id=matchReportFileButton>Click to launch match report</div>
+  </a>
+
+<!-- BLOCK TO SPACE OUT REPORT -->
+<div id=matchReportFileLinkContainer></div>
+
+<!-- REPORT TEXT -->
+
+<div id=matchReportFileTextContainer>
+
+  {{report_text | linebreaksbr}}
+
+</div>
+
+{% endblock %}

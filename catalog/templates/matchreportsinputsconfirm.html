@@ -1,0 +1,25 @@
+{% extends "_baseGolfApp.html" %}
+
+{% block content %}
+
+{% load static %}
+
+<div id=matchReportScrollContainer>
+
+<div id=matchReportTitle>Thank you for your input!</div>
+<div id=matchReportInstructionsConfirm>Your responses help the match report creation engine generate a report for each round</div>
+
+<div id=matchReportFormContainer>
+
+  <div id=matchReportConfirmGif>
+
+  </div>
+
+<a href="{% url 'landingpage' %}">
+<div id=matchReportButton>Return to main app</div></a>
+</div>
+
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends "_baseGolfApp.html" %}
+
+{% block content %}
+
+{% load static %}
+
+<div id="round1LeaderboardHeader">
+  <span id=rd1LeaderboardHighlight>Rd 2 </span>leaderboard
+</div>
+
+<div id="round1Leaderboard">
+  <div id="leaderboardHeaderRow">
+    <div id="headerRowPlayerName">Player name</div>
+    <div id="headerRowPoints">Points</div>
+    <div id="headerRowThru">Thru</div>
+  </div>
+
+  {% if playing_players %}
+  {% for player in playing_players %}
+
+  <div class="playerRow">
+    <div id="leaderboardCounter">{{ forloop.counter }}</div>
+    <img id="playerImage" src="{{ player.player_name.image.url }}">
+    <div id="leaderboardPlayerName">{{ player.player_name }}</div>
+    <div id="leaderboardPlayerPoints">{{ player.player_stbl }}</div>
+    <div id="leaderboardPlayerHoles">{{ player.player_holesplayed }}</div>
+
+    <!-- {% if player.endurance_score == None %}
+    {% elif player.endurance_score == endurance_leader.endurance_score__max %}
+    <div id=leaderboardEnduranceLeader>
+      <img id="leaderboardBackIcon" style="height: 20px; margin-left: 4px; margin-top: 1px" src="{% static 'icons/endurancePurple.svg' %}">
+    </div>
+    {% endif %} -->
+
+  </div>
+
+  {% endfor %}
+  {% else %}
+  No scores recorded yet
+  {% endif %}
+</div>
+
+
+<div id="round1LeaderboardFooter">
+  <a href="{% url 'rd2holelist'%}">
+  <div id="leaderboardBackButton">
+    <img id="leaderboardBackIcon" src="{% static 'icons/leaderboardBackIconWhite.svg' %}">
+  </div>
+</div></a>
+
+{% endblock %}

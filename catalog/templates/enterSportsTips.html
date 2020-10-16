@@ -1,0 +1,257 @@
+{% extends "_baseGolfApp.html" %}
+
+{% block content %}
+
+{% load static %}
+<div id="tipsScrollContainer">
+<div id="tipFormContainer" class= "bigShadow">
+
+  <div id="tipFormHeader">
+    <div id="tipFormIndyText">{{tour_name}}</div>
+    <div id="tipFormDescText">Sports Tipping</div>
+  </div>
+
+<form method = "POST">
+      {% csrf_token %}
+
+<!-- Details -->
+  <div id="tipFormAuthContainer">
+    <div id="authTopRow">Enter your details</div>
+    <div id="rightNameInstructions">
+      <div id="tippingUsername">Your name</div>
+      <div id="tippingPassword">Your identifier</div>
+    </div>
+    <div id="leftNameInput">
+      <div id="tippingUsernameInput">{{ form.name }}</div>
+      <div id="tippingPasswordInput">{{ form.password }}</div>
+    </div>
+    </div>
+
+
+
+  <!--Game 1 -->
+  <div id="tipFormContentContainer">
+    <div id="toprow">Game 1</div>
+    <div id="corerow">
+      <div id="leftpanel">
+        <div class="teamImgContainer" id="netsIMG"></div>
+        <div id="teamTextContainer">Nets</div>
+      </div>
+      <div id="midpanel">
+        <img id="sportsIcon" src="{% static 'icons/tipsBasketballPurple.svg' %}">
+        <div id="vsContainer">VS</div>
+        <div  id="dateContainer">11/1</div>
+      </div>
+      <div id="rightpanel">
+        <div class="teamImgContainer" id="rocketsIMG"></div>
+        <div id="teamTextContainer">Rockets</div>
+      </div>
+    </div>
+    <div id="submitrow"> {{form.game1}}</div>
+  </div>
+
+  <!--Game 2 -->
+  <div id="tipFormContentContainer">
+    <div id="toprow">Game 2</div>
+    <div id="corerow">
+      <div id="leftpanel">
+        <div class="teamImgContainer" id="lightningIMG"></div>
+        <div id="teamTextContainer">Lightning</div>
+      </div>
+      <div id="midpanel">
+        <img id="sportsIcon" src="{% static 'icons/tipsHockeyPurple.svg' %}">
+        <div id="vsContainer">VS</div>
+        <div  id="dateContainer">11/1</div>
+      </div>
+      <div id="rightpanel">
+        <div class="teamImgContainer" id="islandersIMG"></div>
+        <div id="teamTextContainer">Islanders</div>
+      </div>
+    </div>
+    <div class="orangeBorder1" id="submitrow"> {{form.game2 }} </div>
+  </div>
+
+  <!--Game 3 -->
+  <div id="tipFormContentContainer">
+    <div id="toprow">Game 3</div>
+    <div id="corerow">
+      <div id="leftpanel">
+        <div class="teamImgContainer" id="oilersIMG"></div>
+        <div id="teamTextContainer">Oilers</div>
+      </div>
+      <div id="midpanel">
+        <img id="sportsIcon" src="{% static 'icons/tipsHockeyPurple.svg' %}">
+        <div id="vsContainer">VS</div>
+        <div id="dateContainer">11/2</div>
+      </div>
+      <div id="rightpanel">
+        <div class="teamImgContainer" id="penguinsIMG"></div>
+        <div id="teamTextContainer">Penguins</div>
+      </div>
+    </div>
+    <div id="submitrow"> {{form.game3 }} </div>
+  </div>
+
+  <!--Game 4 -->
+  <div id="tipFormContentContainer">
+    <div id="toprow">Game 4</div>
+    <div id="corerow">
+      <div id="leftpanel">
+        <div class="teamImgContainer" id="raptorsIMG"></div>
+        <div id="teamTextContainer">Raptors</div>
+      </div>
+      <div id="midpanel">
+        <img id="sportsIcon" src="{% static 'icons/tipsBasketballPurple.svg' %}">
+        <div id="vsContainer">VS</div>
+        <div id="dateContainer">11/1</div>
+      </div>
+      <div id="rightpanel">
+        <div class="teamImgContainer" id="bucksIMG"></div>
+        <div id="teamTextContainer">Bucks</div>
+      </div>
+    </div>
+    <div id="submitrow"> {{form.game4 }} </div>
+  </div>
+
+  <!--Game 5 -->
+  <div id="tipFormContentContainer">
+    <div id="toprow">Game 5</div>
+    <div id="corerow">
+      <div id="leftpanel">
+        <div class="teamImgContainer" id="crystalIMG"></div>
+        <div id="teamTextContainer">Crystal Pl</div>
+      </div>
+      <div id="midpanel">
+        <img id="sportsIcon" src="{% static 'icons/tipsSoccerPurple.svg' %}">
+        <div id="vsContainer">VS</div>
+        <div id="dateContainer">11/2</div>
+      </div>
+      <div id="rightpanel">
+        <div class="teamImgContainer" id="leicesterIMG"></div>
+        <div id="teamTextContainer">Leicester Ct</div>
+      </div>
+    </div>
+    <div id="submitrow"> {{form.game5 }} </div>
+  </div>
+
+  <!--Game 6 -->
+  <div id="tipFormContentContainer">
+    <div id="toprow">Game 6</div>
+    <div id="corerow">
+      <div id="leftpanel">
+        <div class="teamImgContainer" id="arsenalIMG"></div>
+        <div id="teamTextContainer">Arsenal</div>
+      </div>
+      <div id="midpanel">
+        <img id="sportsIcon" src="{% static 'icons/tipsSoccerPurple.svg' %}">
+        <div id="vsContainer">VS</div>
+        <div id="dateContainer">11/2</div>
+      </div>
+      <div id="rightpanel">
+        <div class="teamImgContainer" id="wolvesIMG"></div>
+        <div id="teamTextContainer">Wolves</div>
+      </div>
+    </div>
+    <div id="submitrow"> {{form.game6 }} </div>
+  </div>
+
+  <!--Game 7 -->
+  <div id="tipFormContentContainer">
+    <div id="toprow">Game 7</div>
+    <div id="corerow">
+      <div id="leftpanel">
+        <div class="teamImgContainer" id="englandIMG"></div>
+        <div id="teamTextContainer">England</div>
+      </div>
+      <div id="midpanel">
+        <img id="sportsIcon" src="{% static 'icons/tipsFootballPurple.svg' %}">
+        <div id="vsContainer">VS</div>
+        <div id="dateContainer">11/2</div>
+      </div>
+      <div id="rightpanel">
+        <div class="teamImgContainer" id="southafricaIMG"></div>
+        <div id="teamTextContainer">Sth Africa</div>
+      </div>
+    </div>
+    <div id="submitrow"> {{form.game7 }} </div>
+  </div>
+
+  <!--Game 8 -->
+  <div id="tipFormContentContainer">
+    <div id="toprow">Game 8</div>
+    <div id="corerow">
+      <div id="leftpanel">
+        <div class="teamImgContainer" id="olemissIMG"></div>
+        <div id="teamTextContainer">Ole Miss</div>
+      </div>
+      <div id="midpanel">
+        <img id="sportsIcon" src="{% static 'icons/tipsFootballPurple.svg' %}">
+        <div id="vsContainer">VS</div>
+        <div id="dateContainer">11/2</div>
+      </div>
+      <div id="rightpanel">
+        <div class="teamImgContainer" id="auburnIMG"></div>
+        <div id="teamTextContainer">Auburn</div>
+      </div>
+    </div>
+    <div id="submitrow"> {{form.game8 }} </div>
+  </div>
+
+  <!--Game 9 -->
+  <div id="tipFormContentContainer">
+    <div id="toprow">Game 9</div>
+    <div id="corerow">
+      <div id="leftpanel">
+        <div class="teamImgContainer" id="oregonIMG"></div>
+        <div id="teamTextContainer">Oregon</div>
+      </div>
+      <div id="midpanel">
+        <img id="sportsIcon" src="{% static 'icons/tipsFootballPurple.svg' %}">
+        <div id="vsContainer">VS</div>
+        <div id="dateContainer">11/2</div>
+      </div>
+      <div id="rightpanel">
+        <div class="teamImgContainer" id="uscIMG"></div>
+        <div id="teamTextContainer">USC</div>
+      </div>
+    </div>
+    <div id="submitrow"> {{form.game9 }} </div>
+  </div>
+
+  <!--Game 10 -->
+  <div id="tipFormContentContainer">
+    <div id="toprow">Game 10</div>
+    <div id="corerow">
+      <div id="leftpanel">
+        <div class="teamImgContainer" id="miamiIMG"></div>
+        <div id="teamTextContainer">Miami</div>
+      </div>
+      <div id="midpanel">
+        <img id="sportsIcon" src="{% static 'icons/tipsFootballPurple.svg' %}">
+        <div id="vsContainer">VS</div>
+        <div id="dateContainer">11/2</div>
+      </div>
+      <div id="rightpanel">
+        <div class="teamImgContainer" id="floridastateIMG"></div>
+        <div id="teamTextContainer">Fl State</div>
+      </div>
+    </div>
+    <div id="submitrow"> {{form.game10 }} </div>
+  </div>
+
+<div class="bigShadow" id="tipFormSubmitContainer">
+  <button id="tipsSubmitButton" type="submit">
+    <img id =tipsSubmitIcon src="{% static 'icons/scoreSubmitWhite.svg' %}">
+  </button>
+</div>
+
+</div>
+
+
+
+</form>
+
+</div>
+
+
+{% endblock %}

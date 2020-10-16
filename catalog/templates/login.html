@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- ADD BROWSER TAB NAME -->
+<title>
+{{tour_name}} | Login
+</title>
+
+<!-- CORE DETAILS FOR TEXT AND DYNAMIC RESIZING -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- LINK TO CSS -->
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+<!-- ADD BROWSER ICON TO PAGE -->
+<link rel="icon"
+    type="image/png"
+    href="{% static 'icons/_faviconShipwreckCircle512.png' %}">
+
+<!-- ADD HOMESCREEN ICON -->
+<link rel="apple-touch-icon"
+  sizes="192x192"
+  href="https://jerseyjaunt-production.s3.us-east-2.amazonaws.com/pwa-assets/logo-ship-192.png">
+
+  <!--  PWA SETTINGS -->
+  <!-- Set homescreen app -->
+  <link rel="apple-touch-icon"
+      href="https://jerseyjaunt-production.s3.us-east-2.amazonaws.com/pwa-assets/logo-ship-512.png"/> <!--Best practice to save the icon (in png format) to an S3 bucket and point to that-->
+  <!-- PWA iOS enable standalone -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <!-- Manifest file -->
+  <link rel="manifest" href="{% static 'manifest.json' %}"/>
+  <meta name="theme-color" content="#3cc194">
+  <!-- PWA iOS enable status bar override -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <!-- iOS splashscreen (not working)-->
+  <link
+      <link rel="apple-touch-startup-image"
+      media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)"
+      href="https://jerseyjaunt-production.s3.us-east-2.amazonaws.com/pwa-assets/logo-ship-512.png"/>
+
+</head>
+
+<body>
+<div id="overallContainer">
+<div id="loginContainer">
+    <div id="loginHeader">
+      Welcome to the official app of
+      </div>
+    <div id="loginBody">
+      <div id="loginIconContainer">
+      <img id="loginIcon" src="{% static 'icons/jauntLogoBlue.svg' %}"></div>
+      <div id="loginTextContainer1">{{tour_name_top_line}}</div>
+      <div id="loginTextContainer2">{{tour_name_highlight}}</div>
+      <div id="loginAuthContainer">{{location_date}}</div>
+    </div>
+
+    <div id="loginFooter">
+      <a href="{% url 'landingpage' %}">
+      <div id="entryButton">Click to enter</div>
+      <!-- </a> -->
+    </div>
+
+  </div>
+
+<a href="https://bayoubonanza.herokuapp.com/admin/" target="_blank">
+<div class="bigShadow" id="adminButton">
+  <img id="loginSettings" src="{% static 'icons/settingsGrey.svg'%}">
+</div></a>
+
+</div>
+
+</body>
+</html>
