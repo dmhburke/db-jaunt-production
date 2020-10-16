@@ -1465,6 +1465,8 @@ def matchreportsfile(request):
     from catalog.matchreport import createReportLong
     #import AWS client
     import boto3
+    import os
+    from os import environ as CONFIG
 
     #NOTE - in production this will be in config in settings
     AWS_ACCESS_KEY_ID = CONFIG['AWS_ACCESS_KEY_ID']
