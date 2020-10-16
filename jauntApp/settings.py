@@ -29,7 +29,9 @@ DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 # DEBUG = True
 
 ALLOWED_HOSTS = [
-    'db-jerseyjaunt.herokuapp.com','127.0.0.1',
+    'db-jerseyjaunt.herokuapp.com',
+    '127.0.0.1',
+    'jaunt.par6golf.com',
 ]
 
 

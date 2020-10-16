@@ -393,7 +393,7 @@ def report_leaderboard(zipped_round_results, random_player1, round_number, adjec
     f"\n\nAnd that brings us to the final leaderboard. \
     ")
 
-    podium = 2
+    podium = 3
     #if statement if number of players is greater than podium number
     if num_players > podium:
         last_place_name = zipped_round_results[0][0]; last_place_points = zipped_round_results[0][1]; last_place_strokes = zipped_round_results[0][2]
