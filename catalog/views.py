@@ -1487,8 +1487,9 @@ def matchreportsfile(request):
 
     # Use below function for short function in matchreport.py file
     # s3_filename = createReport(report_text, round_number, polly_voice)
+    bucket_region = 'us-east-2'
 
-    file_location = "https://{}.s3.{}.amazonaws.com/{}".format(AWS_STORAGE_BUCKET_NAME,region, s3_filename)
+    file_location = "https://{}.s3.{}.amazonaws.com/{}".format(AWS_STORAGE_BUCKET_NAME, bucket_region, s3_filename)
 
     context={
         'report_text': report_text,
