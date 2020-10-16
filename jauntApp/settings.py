@@ -28,7 +28,9 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'y42cuf_8runh$4vio8%10i-0ydp-d1
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 # DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'db-jerseyjaunt.herokuapp.com','127.0.0.1',
+]
 
 
 # Application definition
