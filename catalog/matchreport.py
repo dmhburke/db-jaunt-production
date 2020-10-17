@@ -75,17 +75,21 @@ def generate_round_variables(round_number):
 
 # Get top 3 tussle scores
     tussle_results = select_slot_model.objects.filter(player_name__isnull=False).order_by('-tussle_score', 'player_score')
-    tussle_top3 = tussle_results[:3]
 
-    tussle_names = []
-    for tussler in tussle_top3:
-        tussle_names.append(tussler.player_name.name)
+    if tussle_results != None
+        tussle_top3 = tussle_results[:3]
 
-    tussle_scores = []
-    for tussler_score in tussle_top3:
-        tussle_scores.append(tussler_score.tussle_score)
+        tussle_names = []
+        for tussler in tussle_top3:
+            tussle_names.append(tussler.player_name.name)
 
-    zipped_tussle = list(zip(tussle_names, tussle_scores))
+        tussle_scores = []
+        for tussler_score in tussle_top3:
+            tussle_scores.append(tussler_score.tussle_score)
+
+        zipped_tussle = list(zip(tussle_names, tussle_scores))
+    else:
+        zipped_tussle = []
 
 # GET LEADERBOARD DETAILS
 # Get ranked names, stbl, score
