@@ -128,7 +128,7 @@ USE_TZ = True
 
 # STATIC_URL = '/static/'
 
-# DEPLOYMENT
+# # DEPLOYMENT
 from os import environ as CONFIG
 
 AWS_LOCATION = 'static'
