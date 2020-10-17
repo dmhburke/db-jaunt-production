@@ -3161,6 +3161,110 @@ select#id_report_name {
 
 }
 
+#teamsRoundButton {
+  height: 50px;
+  width: 100%;
+  margin: 20px auto;
+  background-color: var(--brandColorMain);
+  border: 3px solid var(--brandColorHighlight1);
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  font-size: var(--fontSizeHeader3);
+  padding: 12px;
+  display: block;
+
+}
+
+#teams-leaderboard-header-row {
+  height: 20px;
+  width: 100%;
+  background-color: white;
+  margin-top: -10px;
+}
+
+#teams-leaderboard-header-row-groupname, #teams-leaderboard-header-row-thru, #teams-leaderboard-header-row-score {
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+
+#teams-leaderboard-header-row-groupname {
+  width: 73%;
+}
+
+#teams-leaderboard-header-row-thru, #teams-leaderboard-header-row-score {
+  width: 12%;
+  background-color: white;
+  text-align: center;
+  padding-top: 0px;
+}
+
+#teams-leaderboard-results-row {
+  margin: 0px 0px 15px 0;
+  height: 40px;
+}
+
+/*  */
+#teams-leaderboard-results-row {
+  height: 60px;
+  width: 100%;
+  background-color: white;
+  margin-top: 5px 0;
+  border-top: 1px solid var(--brandColorHighlight1);
+  border-bottom: 1px solid var(--brandColorHighlight1);
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+#teams-leaderboard-results-row-number {
+  display: inline-block;
+  vertical-align: middle;
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
+  font-family: var(--brandFont);
+  font-size: var(--fontSizeHeader2);
+  padding-top: 5px;
+  text-align: center;
+  background-color: var(--brandColorMain);
+  color: white;
+}
+
+#teams-leaderboard-results-row-groupname, #teams-leaderboard-results-row-thru, #teams-leaderboard-results-row-score {
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+  font-family: var(--brandFont);
+  font-size: var(--fontSizeHeader2);
+  padding-top: 15px;
+}
+
+#teams-leaderboard-results-row-groupname {
+  width: 61%;
+  padding-top: 10px;
+  overflow-x: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+}
+
+#teams-leaderboard-results-row-thru, #teams-leaderboard-results-row-score {
+  width: 12%;
+  text-align: center;
+}
+
+#teams-leaderboard-results-row-thru {
+  background-color: white;
+  color: var(--brandColorMain);
+}
+
+#teams-leaderboard-results-row-score {
+  color: white;
+  background-color: var(--brandColorMain);
+}
+
+
 /*DESKTOP RESPONSIVE*/
 @media only screen
 and (min-device-width : 375px)

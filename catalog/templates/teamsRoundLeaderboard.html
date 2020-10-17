@@ -2,17 +2,48 @@
 
 {% block content %}
 {% load static %}
+<div id="teamsRoundHeader">
+  <div id=teamsRoundHeaderText>Saturday Teams Round</div>
+   <div id=teamsRoundSubHead>Leaderboard</div></div>
 
-{% if team_name1 == "" %}
-No scores entered yet
-{% else %}
-{% for name, progress_score, holes, score in full_group_sorted %}
+<div id="teamsRoundContainer">
 
-<br>{{name}} {{holes}} {{score}}
+  <div id=teams-leaderboard-header-row>
+    <div id=teams-leaderboard-header-row-groupname></div>
+    <div id=teams-leaderboard-header-row-thru>Thru</div>
+    <div id=teams-leaderboard-header-row-score>Score</div>
+  </div>
 
-{% endfor %}
-{% endif %}
-<br><br>
-<a href='{% url "teamsround" %}'>enter scores</a>
+  {% if team_name1 == "" %}
+  No scores entered yet
+  {% else %}
+
+  {% for name, progress_score, holes, score in full_group_sorted %}
+
+  <div id=teams-leaderboard-results-row>
+    <div id=teams-leaderboard-results-row-number>{{forloop.counter}}</div>
+    <div id=teams-leaderboard-results-row-groupname>{{name}}</div>
+    {% if score == None %}
+    <div id=teams-leaderboard-results-row-thru></div>
+    <div id=teams-leaderboard-results-row-score></div>
+    {% else %}
+    <div id=teams-leaderboard-results-row-thru>{{holes}}</div>
+    <div id=teams-leaderboard-results-row-score>{{score}}</div>
+    {% endif %}
+    </div>
+
+
+  {% endfor %}
+  {% endif %}
+
+<a href="{% url 'teamsround' %}"
+<button id=teamsRoundButton type=submit>Enter scores</button></a>
+
+</div>
+
+
+
+<!-- <br><br>
+<a href='{% url "teamsround" %}'>enter scores</a> -->
 
 {% endblock %}
