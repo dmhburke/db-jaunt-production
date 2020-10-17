@@ -76,7 +76,7 @@ def generate_round_variables(round_number):
 # Get top 3 tussle scores
     tussle_results = select_slot_model.objects.filter(player_name__isnull=False).order_by('-tussle_score', 'player_score')
 
-    if tussle_results != None
+    if tussle_results != None:
         tussle_top3 = tussle_results[:3]
 
         tussle_names = []
