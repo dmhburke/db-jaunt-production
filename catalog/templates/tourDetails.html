@@ -13,18 +13,16 @@
 </div></a>
 
 <!-- Points -->
-<a href="{% url 'touragenda' %}">
+<a href="{% url 'tourpoints' %}">
 <div class="bigShadow landingpageButton" id="landingpageButtonPoints">
   <div id="landingpageIconContainer"><img class="landingIconImage" src="{% static 'icons/tourdetailsAgendaWhite.svg' %}"></div><!--update this SRC to custom ICON 'tourdetailsNameColor.svg' etc-->
   <div class="bold" id="landingpageTextContainer">Points</div>
 </div></a>
 
-<!-- TourMap -->
-<a href="{{map_link}}" target="_blank">
+<!-- Agenda -->
+<a href="{% url 'touragenda' %}">
   <div class="bigShadow landingpageButton" id="landingpageButtonMap"> <!--id="tourdetailsButtonMap"><update this ID to custom with background images etc-->
   <div id="landingpageIconContainer"><img class="landingIconImage" src="{% static 'icons/tourdetailsMapWhite.svg' %}"></div><!--update this SRC to custom ICON 'tourdetailsNameColor.svg' etc-->
-  <div class="bold" id="landingpageTextContainer">Tour Map</div>
-</div></a>
-
+  <div class="bold" id="landingpageTextContainer">Tour Agenda</div></a>
 
 {% endblock %}
