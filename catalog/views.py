@@ -1041,6 +1041,29 @@ def touragenda(request):
     # sunday_events = TourAgendaModel.objects.all().filter(day='SUNDAY')
 
     try:
+        agenda_link = Input_TourDetailsModel.objects.get(tour_name=tour_name).map_link
+    except:
+         agenda_link = ""
+
+    context = {
+        'tour_name': tour_name,
+        'agenda_link': agenda_link,
+        # 'active_events': active_events,
+        # 'friday_events': friday_events,
+        # 'saturday_events': saturday_events,
+        # 'sunday_events': sunday_events,
+        }
+
+    return render(request, 'tourAgenda.html', context=context)
+
+def tourpoints(request):
+    """Landing page for tour details"""
+    # active_events = TourAgendaModel.objects.order_by('number')
+    # friday_events = TourAgendaModel.objects.all().filter(day='FRIDAY')
+    # saturday_events = TourAgendaModel.objects.all().filter(day='SATURDAY')
+    # sunday_events = TourAgendaModel.objects.all().filter(day='SUNDAY')
+
+    try:
         points_link = Input_TourDetailsModel.objects.get(tour_name=tour_name).points_link
     except:
          points_link = ""
@@ -1054,7 +1077,7 @@ def touragenda(request):
         # 'sunday_events': sunday_events,
         }
 
-    return render(request, 'tourAgenda.html', context=context)
+    return render(request, 'tourMap.html', context=context)
 
 def playerdetail (request,name):
     """View function showing individual player's results"""

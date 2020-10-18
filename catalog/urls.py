@@ -39,8 +39,10 @@ urlpatterns = [
     path('entersocial/', views.entersocial, name='entersocial'),
     # TOUR DETAILS - players
     path('tourplayers/', views.tourplayers, name='tourplayers'),
-    # TOUR DETAILS - agenda
+    # TOUR DETAILS - points
     path('touragenda/', views.touragenda, name='touragenda'),
+    # TOUR DETAILS - agenda
+    path('tourpoints/', views.tourpoints, name='tourpoints'),
     # PLAYER DETAILS
     path('player/<name>', views.playerdetail, name='playerdetail'),
     # MATCH REPORTS
