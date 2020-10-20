@@ -33,128 +33,131 @@ DAYS = (
 #TIPPING_SETUP
 GAME_1 = (
     ("", "Select result"),
-    ("NETS", "Nets"),
-    ("ROCKETS", "Rockets"),
+    ("CHENNAI", "Chennai"),
+    ("MUMBAI", "Mumbai"),
+    ("TIE", "Tie"),
     )
 
 GAME_2 = (
     ("", "Select result"),
-    ("LIGHTNING", "Lightning"),
-    ("ISLANDERS", "Islanders"),
+    ("BARCELONA", "Barcelona"),
+    ("REAL_MADRID", "Real Madrid"),
+    ("DRAW", "Draw"),
     )
 
 GAME_3 = (
     ("", "Select result"),
-    ("OILERS", "Oilers"),
-    ("PENGUINS", "Penguins"),
+    ("RAYS", "Rays"),
+    ("DODGERS", "Dodgers"),
     )
 
 GAME_4 = (
     ("", "Select result"),
-    ("RAPTORS", "Raptors"),
-    ("BUCKS", "Bucks"),
+    ("AUBURN", "Auburn"),
+    ("OLE_MISS", "Ole Miss"),
     )
 
 GAME_5 = (
     ("", "Select result"),
-    ("CRYSTAL_PALACE", "Crystal Palace"),
-    ("LEICESTER_CITY", "Leicester City"),
-    ("DRAW", "Draw"),
+    ("MICHIGAN", "Michigan"),
+    ("MINNESOTA", "Minnesota"),
     )
 
 GAME_6 = (
     ("", "Select result"),
-    ("ARSENAL", "Arsenal"),
-    ("WOLVERHAMPTON", "Wolverhampton"),
-    ("DRAW", "Draw"),
+    ("IOWA_STATE", "Iowa State"),
+    ("OKLAHOMA_STATE", "Oklahoma State"),
     )
 
 GAME_7 = (
     ("", "Select result"),
-    ("ENGLAND", "England"),
-    ("SOUTH_AFRICA", "South Africa"),
+    ("MAN_UNITED", "Man United"),
+    ("CHELSEA", "Chelsea"),
+    ("DRAW", "Draw"),
     )
-
 
 GAME_8 = (
     ("", "Select result"),
-    ("OLE_MISS", "Ole Miss"),
-    ("AUBURN", "Auburn"),
+    ("FRANCE", "France"),
+    ("WALES", "Wales"),
+    ("TIE", "Tie"),
     )
 
 GAME_9 = (
     ("", "Select result"),
-    ("OREGON", "Oregon"),
-    ("USC", "USC"),
+    ("DODGERS", "Dodgers"),
+    ("RAYS", "Rays"),
     )
 
 GAME_10 = (
     ("", "Select result"),
-    ("MIAMI", "Miami"),
-    ("FLORIDA_STATE", "Florida State"),
+    ("PANTHERS", "Panthers"),
+    ("STORM", "Storm"),
     )
 
 #RESULTS CHECK - change empty result value
 GAME_1R = (
     ("NOT_COMPLETE", "No result"),
-    ("NETS", "Nets"),
-    ("ROCKETS", "Rockets"),
+    ("CHENNAI", "Chennai"),
+    ("MUMBAI", "Mumbai"),
+    ("TIE", "Tie"),
     )
 
 GAME_2R = (
     ("NOT_COMPLETE", "No result"),
-    ("LIGHTNING", "Lightning"),
-    ("ISLANDERS", "Islanders"),
+    ("BARCELONA", "Barcelona"),
+    ("REAL_MADRID", "Real Madrid"),
+    ("DRAW", "Draw"),
     )
 
 GAME_3R = (
     ("NOT_COMPLETE", "No result"),
-    ("OILERS", "Oilers"),
-    ("PENGUINS", "Penguins"),
+    ("RAYS", "Rays"),
+    ("DODGERS", "Dodgers"),
     )
 
 GAME_4R = (
     ("NOT_COMPLETE", "No result"),
-    ("RAPTORS", "Raptors"),
-    ("BUCKS", "Bucks"),
+    ("AUBURN", "Auburn"),
+    ("OLE_MISS", "Ole Miss"),
     )
 
 GAME_5R = (
     ("NOT_COMPLETE", "No result"),
-    ("CRYSTAL_PALACE", "Crystal Palace"),
-    ("LEICESTER_CITY", "Leicester City"),
-    ("DRAW", "Draw"),
+    ("MICHIGAN", "Michigan"),
+    ("MINNESOTA", "Minnesota"),
     )
 
 GAME_6R = (
     ("NOT_COMPLETE", "No result"),
-    ("ARSENAL", "Arsenal"),
-    ("WOLVERHAMPTON", "Wolverhampton"),
-    ("DRAW", "Draw"),
+    ("IOWA_STATE", "Iowa State"),
+    ("OKLAHOMA_STATE", "Oklahoma State"),
     )
 
 GAME_7R = (
     ("NOT_COMPLETE", "No result"),
-    ("ENGLAND", "England"),
-    ("SOUTH_AFRICA", "South Africa"),
+    ("MAN_UNITED", "Man United"),
+    ("CHELSEA", "Chelsea"),
+    ("DRAW", "Draw"),
     )
 
 GAME_8R = (
     ("NOT_COMPLETE", "No result"),
-    ("OLE_MISS", "Ole Miss"),
-    ("AUBURN", "Auburn"),
+    ("FRANCE", "France"),
+    ("WALES", "Wales"),
+    ("TIE", "Tie"),
     )
 
 GAME_9R = (
     ("NOT_COMPLETE", "No result"),
-    ("OREGON", "Oregon"),
-    ("USC", "USC"),
+    ("DODGERS", "Dodgers"),
+    ("RAYS", "Rays"),
     )
 
 GAME_10R = (
     ("NOT_COMPLETE", "No result"),
-    ("MIAMI", "Miami"),
-    ("FLORIDA_STATE", "Florida State"),
+    ("PANTHERS", "Panthers"),
+    ("STORM", "Storm"),
     )
 
 VOICE_CHOICES = (

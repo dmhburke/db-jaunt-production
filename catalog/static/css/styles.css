@@ -1566,8 +1566,14 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 #sportsIcon {
-  height: 40%;
-  width: 100%;
+  display: block;
+  height: 40px;
+  width: 40px;
+  background-color: var(--brandColorMain);
+  border-radius: 100%;
+  margin: 0px auto;
+  margin-top: 5px;
+  padding: 5px;
 
 }
 
@@ -1589,6 +1595,7 @@ input[type=number]::-webkit-outer-spin-button {
   font-size: var(--fontSizeMainText);
   color: var(--brandColorMain);
   font-weight: bold;
+  margin-top: -5px;
 
 }
 
@@ -1654,132 +1661,129 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0 auto;
   }
 
-  #netsIMG {
-    background-image: url(https://media2.giphy.com/media/xT9KVxF9kh6JOeLEgo/source.gif);
-    background-position: 50% 50%;
-    background-size: 150px;
-    background-repeat: no-repeat;
-
-  }
-
-  #rocketsIMG {
-    background-image: url(https://media3.giphy.com/media/l41lXGxBwXYFcJoJ2/source.gif);
-    background-position: 50% 70%;
-    background-size: 150px;
-    background-repeat: no-repeat;
-
-  }
-
-
-#lightningIMG {
-  background-image: url(https://media3.giphy.com/media/xT1XGv8TinfJKRMYy4/source.gif);
+#chennaiIMG {
+  background-image: url(https://thumbs.gfycat.com/SomberSandyDeinonychus-max-1mb.gif);
   background-position: 50% 50%;
   background-size: 150px;
   background-repeat: no-repeat;
+  }
 
-}
+#mumbaiIMG {
+  background-image: url(https://thumbs.gfycat.com/DecimalGiddyChipmunk-max-1mb.gif);
+  background-position: 50% 50%;
+  background-size: 150px;
+  background-repeat: no-repeat;
+  }
 
-#islandersIMG {
-  background-image: url(https://media.giphy.com/media/t7R6I2uZ2qRhMiR5g4/giphy.gif);
+
+#BarcelonaIMG {
+  background-image: url(https://media4.giphy.com/media/ZyvFtATzLrczE1QE7u/giphy.gif);
+  background-position: 50% 50%;
+  background-size: 150px;
+  background-repeat: no-repeat;
+  }
+
+#realIMG {
+  background-image: url(https://media0.giphy.com/media/KyIdl29TnjJLf0Y0Fm/source.gif);
   background-position: 60% 50%;
   background-size: 130px;
   background-repeat: no-repeat;
+  }
 
-}
-
-#oilersIMG {
-  background-image: url(https://media.giphy.com/media/nf8VUBTbpqvN6/giphy.gif);
+#raysIMG {
+  background-image: url(https://media1.tenor.com/images/523c25d8aeeae1abf136e8dce9dc3555/tenor.gif?itemid=14268502);
   background-position: 50% 50%;
   background-size: 150px;
   background-repeat: no-repeat;
 
 }
 
-#penguinsIMG {
-  background-image: url(https://media2.giphy.com/media/xUPGcfMRQ4YtqUNUxG/source.gif);
+#dodgersIMG {
+  background-image: url(https://media3.giphy.com/media/VCsxXlFxhJwYtvbRnI/giphy.gif);
   background-position: 50% 50%;
   background-size: 150px;
   background-repeat: no-repeat;
 }
 
-#raptorsIMG {
-  background-image: url(https://media3.giphy.com/media/YXVqWUjjb49Ne/source.gif);
+#auburnIMG {
+  background-image: url(https://i.pinimg.com/originals/1e/39/bd/1e39bd1a9d49d7ae290536c2f80a4d92.gif);
   background-position: 50% 50%;
   background-size: 150px;
   background-repeat: no-repeat;
 }
 
-#bucksIMG {
-  background-image: url(https://media3.giphy.com/media/l4FGC9uKnT8C4Qw0w/giphy.gif);
+#oleIMG {
+  background-image: url(https://media1.giphy.com/media/l0MYApFITtUJ18TD2/giphy.gif);
   background-position: 50% 50%;
   background-size: 150px;
   background-repeat: no-repeat;
 }
-
-#crystalIMG {
-  background-image: url(https://media2.giphy.com/media/fepr8N4lbpAP4uVmml/giphy.gif);
+/* Game 5 */
+#michiganIMG {
+  background-image: url(https://i.gifer.com/7auZ.gif);
   background-position: 50% 50%;
   background-size: 160px;
   background-repeat: no-repeat;
 
 }
 
-#leicesterIMG {
-  background-image: url(https://media0.giphy.com/media/FdkcnYvveO9b2/source.gif);
+#minnesotaIMG {
+  background-image: url(https://media4.giphy.com/media/l4hLz482mTEv4Q7f2/source.gif);
   background-position: 50% 50%;
   background-size: 160px;
   background-repeat: no-repeat;
 
 }
-
-#arsenalIMG {
-  background-image: url(https://media.giphy.com/media/lTTefuonQzIRO/giphy.gif);
+/* Game 6 */
+#iowaIMG {
+  background-image: url(https://media4.giphy.com/media/9OZUXKFBYVgt9QQcNY/giphy.gif);
   background-position: 50% 50%;
   background-size: 150px;
   background-repeat: no-repeat;
 
 }
 
-#wolvesIMG {
-  background-image: url(https://thumbs.gfycat.com/DecimalPointedCreature-small.gif);
+#okIMG {
+  background-image: url(https://media0.giphy.com/media/H34RRFArsnZv7ZH08V/giphy.gif);
   background-position: 60% 70%;
   background-size: 150px;
   background-repeat: no-repeat;
 
 }
-
-#olemissIMG {
-  background-image: url(https://cdn.vox-cdn.com/uploads/chorus_asset/file/8987049/de5feb310a77fc0f0cb9539c0215f3cc.gif);
+/* Game 7 */
+#manuIMG {
+  background-image: url(https://media2.giphy.com/media/T2AmoAqrjAluU/giphy.gif);
   background-position: 80% 50%;
   background-size: 160px;
   background-repeat: no-repeat;
 
 }
 
-#auburnIMG {
-  background-image: url(https://media.giphy.com/media/QZF8DPLPQqg1O/giphy.gif);
+#chelseaIMG {
+  background-image: url(https://media3.giphy.com/media/yvAco8XNqJafSfLmBP/giphy.gif);
   background-position: 40% 70%;
   background-size: 130px;
   background-repeat: no-repeat;
 
 }
 
-
-#oregonIMG {
-  background-image: url(https://media.giphy.com/media/WqkNB9LRhWpMs/giphy.gif);
+/* Game 8 */
+#franceIMG {
+  background-image: url(https://media3.giphy.com/media/VIExvud2N4OcWq5pF5/giphy.gif);
   background-position: 70% 50%;
   background-size: 160px;
   background-repeat: no-repeat;
 
 }
 
-#uscIMG {
-  background-image: url(https://media.giphy.com/media/12kjGNKi50kH4s/giphy.gif);
+#walesIMG {
+  background-image: url(https://thumbs.gfycat.com/AfraidPeacefulDikdik-small.gif);
   background-position: 40% 70%;
   background-size: 150px;
   background-repeat: no-repeat;
 }
 
+/* Game 9 */
 #englandIMG {
   background-image: url(https://media3.giphy.com/media/DlUHz1lj4CpOg/giphy.gif);
   background-position: 55% 45%;
@@ -1796,16 +1800,17 @@ input[type=number]::-webkit-outer-spin-button {
 
 }
 
-#miamiIMG {
-  background-image: url(https://media.giphy.com/media/uN9CtBUTdPPP2/giphy.gif);
+/* Game 10 */
+#panthersIMG {
+  background-image: url(https://media4.giphy.com/media/Pm4hnh0EDCjtcBfKOT/giphy.gif);
   background-position: 50% 50%;
   background-size: 160px;
   background-repeat: no-repeat;
 
 }
 
-#floridastateIMG {
-  background-image: url(https://media3.giphy.com/media/3ohzgJRBVq22ySKdna/giphy.gif);
+#stormIMG {
+  background-image: url(https://media0.giphy.com/media/MY7QQnKzI4NfMoo75l/giphy-downsized-medium.gif);
   background-position: 70% 0%;
   background-size: 160px;
   background-repeat: no-repeat;
