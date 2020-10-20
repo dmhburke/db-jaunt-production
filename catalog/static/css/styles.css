@@ -1424,7 +1424,7 @@ input[type=number]::-webkit-outer-spin-button {
   height: 20%;
   width: 67%;
   line-height: 10px;
-  font-size: 0.8rem;
+  font-size: var(--fontSizeHeader4);
   border-bottom: 1px solid var(--brandColorMain);
   color: var(--brandColorMain);
 }
@@ -1433,7 +1433,7 @@ input[type=number]::-webkit-outer-spin-button {
   display: inline-block;
   vertical-align: middle;
   height: 70%;
-  width: 49%;
+  width: 40%;
   margin-top: 4px;
 }
 
@@ -1443,7 +1443,7 @@ input[type=number]::-webkit-outer-spin-button {
   padding-left: 4px;
   font-family: var(--brandFont);
   color: var(--brandColorMain);
-  font-size: var(--fontSizeHeader4);
+  font-size: 16px;
 }
 
 #tippingPassword {
@@ -1452,14 +1452,14 @@ input[type=number]::-webkit-outer-spin-button {
   padding-left: 4px;
   font-family: var(--brandFont);
   color: var(--brandColorMain);
-  font-size: var(--fontSizeHeader4);
+  font-size: 16px;
 }
 
 #leftNameInput {
   display: inline-block;
   vertical-align: middle;
   height: 70%;
-  width: 49%;
+  width: 57%;
   margin-top: 4px;
 }
 
@@ -1470,7 +1470,7 @@ input[type=number]::-webkit-outer-spin-button {
   width: 100%;
   text-align-last: center;
   font-family: var(--brandFont);
-  font-size: var(--fontSizeHeader4);
+  font-size: 16px;
   text-transform: uppercase;
   color: var(--brandColorMain);
 }
@@ -1482,7 +1482,7 @@ input[type=number]::-webkit-outer-spin-button {
   width: 100%;
   text-align: center;
   font-family: var(--brandFont);
-  font-size: var(--fontSizeHeader4);
+  font-size: 16px;
   text-transform: uppercase;
   color: var(--brandColorMain);
 }
@@ -1513,7 +1513,7 @@ input[type=number]::-webkit-outer-spin-button {
   border: 1px solid white;
   line-height: 10px;
   color: var(--brandColorMain);
-  font-size: var(--fontSizeMainText);
+  font-size: var(--fontSizeHeader4);
   border-bottom: 1px solid var(--brandColorMain);
 }
 
@@ -1653,10 +1653,10 @@ input[type=number]::-webkit-outer-spin-button {
   background: none;
   text-align-last: center;
   font-family: var(--brandFont);
-  font-size: var(--fontSizeHeader4);
+  font-size: 16px;
   text-transform: uppercase;
   color: var(--brandColorMain);
-  width: 160px;
+  min-width: 100px;
   display: block;
   margin: 0 auto;
   }
