@@ -3269,6 +3269,21 @@ select#id_report_name {
   background-color: var(--brandColorMain);
 }
 
+#gafGauntletImg {
+  height: 150px;
+  width: 150px;
+  border-radius: 100%;
+  /* border: 2px solid var(--brandColorMain); */
+  margin: 10px auto;
+  margin-bottom: 10px;
+  background-image: url(https://db-par6golfgeneral.s3.us-east-2.amazonaws.com/media/playerimages/PlayerImageSG.jpg);
+  background-position: 50% 50%;
+  background-size: 150px;
+  background-repeat: no-repeat;
+
+  /* https://db-par6golfgeneral.s3.us-east-2.amazonaws.com/media/playerimages/PlayerImageSG.jpg */
+}
+
 
 /*DESKTOP RESPONSIVE*/
 @media only screen
