@@ -1,0 +1,137 @@
+
+{% extends '_baseGolfApp.html' %}
+
+{% block content %}
+
+{% load static %}
+
+<div id=matchReportScrollContainer>
+<!-- {{test_text | linebreaksbr}} -->
+
+<div id=matchReportTitle>Welcome to the Gaf Gauntlet</div>
+
+<div id=gafGauntletImg class=bigShadow></div>
+
+<div id=matchReportLeaderboard>Leaderboard</div>
+<div id=matchReportLeaderboardHeaderRow>
+  <div id=matchReportLeaderboardHeaderPlayer>Player name</div><div id=matchReportLeaderboardHeaderScores></div><div id=matchReportLeaderboardHeaderScores>Stbl</div>
+  </div>
+  <!-- Loop player details -->
+  {% for player, score in total_gauntlet_sum_list_sorted %}
+  {% if player == None %}
+  {% else %}
+  <div class=matchReportPlayerRow>
+      <div id=matchReportLeaderboardPlayer>{{forloop.counter}}. {{player}}</div><div id=matchReportLeaderboardScores></div><div id=matchReportLeaderboardScores>{{score}}</div>
+  </div>
+  {% endif %}
+  {% endfor %}
+  <!-- End player loop -->
+
+<!-- RESULTS SECTION -->
+<div class=matchReportSection id=showResults>Round-by-round breakdown</div>
+<div class="matchReportCollapse" id=resultsCollapse>
+<div class=matchReportContent>
+
+<!-- WARM-UP ROUND -->
+<div id=matchReportLeaderboard>Warm-up round</div>
+<div id=matchReportLeaderboardHeaderRow>
+  <div id=matchReportLeaderboardHeaderPlayer>Player name</div><div id=matchReportLeaderboardHeaderScores></div><div id=matchReportLeaderboardHeaderScores>Stbl</div>
+  </div>
+  <!-- Loop player details -->
+  {% for player, score in warm_up_gauntlet_combined_list %}
+  {% if player == None %}
+  {% else %}
+  <div class=matchReportPlayerRow>
+      <div id=matchReportLeaderboardPlayer>{{forloop.counter}}. {{player}}</div><div id=matchReportLeaderboardScores></div><div id=matchReportLeaderboardScores>{{score}}</div>
+  </div>
+  {% endif %}
+  {% endfor %}
+  <!-- End player loop -->
+
+<!-- ROUND 1 -->
+<div id=matchReportLeaderboard>Round 1</div>
+<div id=matchReportLeaderboardHeaderRow>
+  <div id=matchReportLeaderboardHeaderPlayer>Player name</div><div id=matchReportLeaderboardHeaderScores></div><div id=matchReportLeaderboardHeaderScores>Stbl</div>
+  </div>
+  <!-- Loop player details -->
+  {% for player, score in rd1_gauntlet_combined_list %}
+  {% if player == None %}
+  {% else %}
+  <div class=matchReportPlayerRow>
+      <div id=matchReportLeaderboardPlayer>{{forloop.counter}}. {{player}}</div><div id=matchReportLeaderboardScores></div><div id=matchReportLeaderboardScores>{{score}}</div>
+  </div>
+  {% endif %}
+  {% endfor %}
+  <!-- End player loop -->
+
+  <!-- ROUND 2 -->
+  <div id=matchReportLeaderboard>Round 2</div>
+  <div id=matchReportLeaderboardHeaderRow>
+    <div id=matchReportLeaderboardHeaderPlayer>Player name</div><div id=matchReportLeaderboardHeaderScores></div><div id=matchReportLeaderboardHeaderScores>Stbl</div>
+    </div>
+    <!-- Loop player details -->
+    {% for player, score in rd2_gauntlet_combined_list %}
+    {% if player == None %}
+    {% else %}
+    <div class=matchReportPlayerRow>
+        <div id=matchReportLeaderboardPlayer>{{forloop.counter}}. {{player}}</div><div id=matchReportLeaderboardScores></div><div id=matchReportLeaderboardScores>{{score}}</div>
+    </div>
+    {% endif %}
+    {% endfor %}
+    <!-- End player loop -->
+
+</div>
+</div>
+
+
+{% endblock %}
+
+
+
+<!-- Total Gaf Gauntlet <br><br>
+{% for name, score in total_gauntlet_sum_list_sorted %}
+
+{% if name == None %}
+{% else %}
+
+{{name}} {{score}}<br>
+
+{% endif %}
+
+{% endfor %}
+
+<br><br>Warm Up Gaf Gauntlet<br><br>
+{% for name, score in warm_up_gauntlet_combined_list %}
+
+{% if name == None %}
+{% else %}
+
+{{name}} {{score}}<br>
+
+{% endif %}
+
+{% endfor %}
+
+<br><br>Rd1 Gaf Gauntlet<br><br>
+{% for name, score in rd1_gauntlet_combined_list %}
+
+{% if name == None %}
+{% else %}
+
+{{name}} {{score}}<br>
+
+{% endif %}
+
+{% endfor %}
+
+<br><br>Rd2 Gaf Gauntlet<br><br>
+{% for name, score in rd2_gauntlet_combined_list %}
+
+{% if name == None %}
+{% else %}
+
+{{name}} {{score}}<br>
+
+{% endif %}
+
+{% endfor %} -->

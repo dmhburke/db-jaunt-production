@@ -1546,3 +1546,89 @@ def matchreportsinputconfirm(request):
     context = {}
 
     return render(request, 'matchreportsinputsconfirm.html', context = context)
+
+def gafgauntlet(request):
+    from catalog.gafgauntlet import get_gauntlet_scores
+
+    warm_up_gauntlet_holes = [1]
+    rd1_gauntlet_holes = [1,3]
+    rd2_gauntlet_holes = [1,2,3]
+
+    warm_up_gauntlet = {
+        "holes": warm_up_gauntlet_holes,
+        "slot_model": Rd4SlotModel,
+        "stableford_model": Rd4StablefordModel
+        }
+
+    rd1_gauntlet = {
+        "holes": rd1_gauntlet_holes,
+        "slot_model": Rd1SlotModel,
+        "stableford_model": Rd1StablefordModel
+        }
+
+    rd2_gauntlet = {
+        "holes": rd2_gauntlet_holes,
+        "slot_model": Rd2SlotModel,
+        "stableford_model": Rd2StablefordModel
+        }
+
+    warm_up_gauntlet_combined_list = get_gauntlet_scores(warm_up_gauntlet)
+    rd1_gauntlet_combined_list = get_gauntlet_scores(rd1_gauntlet)
+    rd2_gauntlet_combined_list = get_gauntlet_scores(rd2_gauntlet)
+
+    # combine all lists into total
+    gauntlet_active_players = PlayerModel.objects.all()
+
+    total_gauntlet_sum_list = []
+    print('FINAL SUM TEST')
+    for player in gauntlet_active_players:
+        #define variables and lists
+        player_results_list = []
+        player_sum_list = []
+        player_name = player.name
+        #create list with name of all active players
+        player_results_list.append(player_name)
+        #loop through warm-up results and add to sum list
+        if warm_up_gauntlet_combined_list == None:
+            pass
+        else:
+            for result in warm_up_gauntlet_combined_list:
+                if result[0] == player_name:
+                    player_sum_list.append(result[1])
+                else:
+                    pass
+        #loop through rd1 results and add to sum list
+        if rd1_gauntlet_combined_list == None:
+            pass
+        else:
+            for result in rd1_gauntlet_combined_list:
+                if result[0] == player_name:
+                    player_sum_list.append(result[1])
+                else:
+                    pass
+        #loop through rd2 results and add to sum list
+        if rd2_gauntlet_combined_list == None:
+            pass
+        else:
+            for result in rd2_gauntlet_combined_list:
+                if result[0] == player_name:
+                    player_sum_list.append(result[1])
+                else:
+                    pass
+        sum_total = sum(player_sum_list)
+        player_results_list.append(sum_total)
+        total_gauntlet_sum_list.append(player_results_list)
+    print(total_gauntlet_sum_list)
+
+
+    total_gauntlet_sum_list_sorted = sorted(total_gauntlet_sum_list, key = lambda x: x[1], reverse=True)
+
+
+    context = {
+        'warm_up_gauntlet_combined_list': warm_up_gauntlet_combined_list,
+        'rd1_gauntlet_combined_list': rd1_gauntlet_combined_list,
+        'rd2_gauntlet_combined_list': rd2_gauntlet_combined_list,
+        'total_gauntlet_sum_list_sorted': total_gauntlet_sum_list_sorted,
+    }
+
+    return render(request, 'gafGauntlet.html', context=context)

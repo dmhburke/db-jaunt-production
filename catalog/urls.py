@@ -49,6 +49,7 @@ urlpatterns = [
     path('matchreports', views.matchreports, name='matchreports'),
     path('matchreportsfile', views.matchreportsfile, name='matchreportsfile'),
     path('matchreportsinput', views.matchreportsinputs, name='matchreportsinput'),
-    path('matchreportsinputconfirm', views.matchreportsinputconfirm, name='matchreportsinputconfirm')
-
-]
+    path('matchreportsinputconfirm', views.matchreportsinputconfirm, name='matchreportsinputconfirm'),
+    # GAF GAUNTLET
+    path('gafgauntlet', views.gafgauntlet, name='gafgauntlet')
+    ]
