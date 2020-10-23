@@ -773,7 +773,7 @@ def rd4holedetail(request,pk):
                 return redirect('rd4holelist')
     else:
         try:
-            form = Rd4ScoreForm(instance=get_object_or_404(Rd3ScoreModel,hole=selected_hole)) ## REFERENCE: this is how to pre-pop instance details
+            form = Rd4ScoreForm(instance=get_object_or_404(Rd4ScoreModel,hole=selected_hole)) ## REFERENCE: this is how to pre-pop instance details
         except:
             form = Rd4ScoreForm()
 
