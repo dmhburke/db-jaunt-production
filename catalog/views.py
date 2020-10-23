@@ -1550,9 +1550,9 @@ def matchreportsinputconfirm(request):
 def gafgauntlet(request):
     from catalog.gafgauntlet import get_gauntlet_scores
 
-    warm_up_gauntlet_holes = [1]
-    rd1_gauntlet_holes = [1,3]
-    rd2_gauntlet_holes = [1,2,3]
+    warm_up_gauntlet_holes = [8]
+    rd1_gauntlet_holes = [4,8,12,16]
+    rd2_gauntlet_holes = [4,8,12,16]
 
     warm_up_gauntlet = {
         "holes": warm_up_gauntlet_holes,
