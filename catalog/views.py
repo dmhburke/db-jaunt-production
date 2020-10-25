@@ -1548,10 +1548,10 @@ def matchreportsinputconfirm(request):
     return render(request, 'matchreportsinputsconfirm.html', context = context)
 
 def gafgauntlet(request):
-    from catalog.gafgauntlet import get_gauntlet_scores
+    from catalog.gafgauntlet import get_gauntlet_scores, get_gauntlet_scores_new
 
     warm_up_gauntlet_holes = [8]
-    rd1_gauntlet_holes = [4,8,12,16]
+    rd1_gauntlet_holes = [4, 8] #12,16
     rd2_gauntlet_holes = [4,8,12,16]
 
     warm_up_gauntlet = {
@@ -1587,11 +1587,11 @@ def gafgauntlet(request):
         player_sum_list = []
         player_name = player.name
         #create list with name of all active players
-        player_results_list.append(player_name)
         #loop through warm-up results and add to sum list
         if warm_up_gauntlet_combined_list == None:
             pass
         else:
+            player_results_list.append(player_name)
             for result in warm_up_gauntlet_combined_list:
                 if result[0] == player_name:
                     player_sum_list.append(result[1])
@@ -1622,6 +1622,8 @@ def gafgauntlet(request):
 
 
     total_gauntlet_sum_list_sorted = sorted(total_gauntlet_sum_list, key = lambda x: x[1], reverse=True)
+
+    get_gauntlet_scores_new(rd1_gauntlet)
 
 
     context = {

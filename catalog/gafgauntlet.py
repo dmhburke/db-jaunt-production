@@ -1,4 +1,26 @@
 
+def get_gauntlet_scores_new(gauntlet_dict):
+
+    #define dict details
+    holes = gauntlet_dict["holes"]
+    slot_model = gauntlet_dict["slot_model"]
+    stableford_model = gauntlet_dict["stableford_model"]
+
+    #define players by slot
+    slot_names = slot_model.objects.all()
+
+    total_slot_list = []
+    for player in slot_names:
+        numbered_slot_list = []
+        numbered_slot_list.append(player.player_slot)
+        if player.player_name == None:
+            numbered_slot_list.append(None)
+        else:
+            numbered_slot_list.append(player.player_name.name)
+        print(numbered_slot_list)
+
+    return gauntlet_dict #placeholder
+
 
 def get_gauntlet_scores(gauntlet_dict):
 
@@ -9,13 +31,17 @@ def get_gauntlet_scores(gauntlet_dict):
 
       #define players by slot
       slot_names = slot_model.objects.all()
+
       slot_list = []
       for gauntlet_name in slot_names:
+        numbered_slot = []
         if gauntlet_name.player_name == None:
             slot_list.append(None)
         else:
-            # slot_list.append(name.player_name)
             slot_list.append(gauntlet_name.player_name.name)
+            # slot_list.append(gauntlet_name.player_slot)
+
+      print(f'SLOT-LIST >>>>{slot_list}')
 
       #define scores in gauntlet holes
       fields = stableford_model._meta.get_fields()
